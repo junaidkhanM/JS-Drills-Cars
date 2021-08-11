@@ -13,4 +13,5 @@ module.exports.problem1 = (data) => {
             return data[i];
         }
     }
+    return [];
 }
