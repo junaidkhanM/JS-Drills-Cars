@@ -5,6 +5,9 @@
 // "Car 33 is a *car year goes here* *car make goes here* *car model goes here*"
 
 module.exports.problem1 = (data) => {
+    if (data.length === 0) {
+        return [];
+    }
     for (let i = 0; i < data.length; i++) {
         if (data[i].id === 33) {
             return data[i];
