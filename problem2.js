@@ -4,8 +4,8 @@
 // "Last car is a *car make goes here* *car model goes here*"
 
 module.exports.problem2 = (data) => {
-    if (data.length == 0) {
-        return [];
+    if (data === undefined || data.length === 0) {
+        return;
     }
     return data[data.length - 1];
 }

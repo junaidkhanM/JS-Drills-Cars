@@ -4,10 +4,13 @@
 // Once you have the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
 
 module.exports.problem6 = (data) => {
+    if (data === undefined || data.length === 0) {
+        return;
+    }
     let result = [];
     for (let i = 0; i < data.length; i++) {
         if (data[i].car_make === 'BMW' || data[i].car_make === 'Audi') {
-            result.push(data[i].car_make);
+            result.push(data[i]);
         }
     }
     return result;

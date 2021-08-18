@@ -4,14 +4,14 @@
 //  Then log the car's year, make, and model in the console log in the format of: 
 // "Car 33 is a *car year goes here* *car make goes here* *car model goes here*"
 
-module.exports.problem1 = (data) => {
-    if (data.length === 0) {
-        return [];
+module.exports.problem1 = (data, id) => {
+    if (id === undefined || data === undefined || data.length === 0)  {
+        return;
     }
     for (let i = 0; i < data.length; i++) {
-        if (data[i].id === 33) {
+        if (data[i].id === id) {
             return data[i];
         }
     }
-    return [];
+    return;
 }

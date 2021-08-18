@@ -1,10 +1,14 @@
 const {problem1} = require('../problem1');
 const { inventory } = require('../inventory');
 
+const id = 33;
+const result = problem1(inventory, id);
 
-const result = problem1(inventory);
-if (result.length === 0) {
-    console.log([]);
+if (result === undefined) {
+    console.log("No car with id :", id);
 } else {
-    console.log(`Car 33 is a ${result.car_year} ${result.car_make} ${result.car_model}`);
+    console.log(`Car ${id} is a ${result.car_year} ${result.car_make} ${result.car_model}`);
 }
+
+
+

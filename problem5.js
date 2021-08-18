@@ -4,12 +4,15 @@
 // find out how many cars were made before the year 2000 and return the array of older cars and log its length.
 
 module.exports.problem5 = (data) => {
+    if (data === undefined || data.length === 0) {
+        return;
+    }
     let result = [];
     for (let i = 0; i < data.length; i++) {
         if (data[i].car_year < 2000) {
-            result.push(data[i].car_year);
+            result.push(data[i]);
         }
     }
 
-    return result
+    return result;
 }
